@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.nav{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #89CFF0;
+    min-height: 50px;
+    padding: 0.5px;
+}
+
+.Home{
+    padding-left: 20px;
+    padding-top: 0.5%;
+    color: white;
+}
+
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: #6495ED;
+    color: white;
+    min-height: 10px;
+    padding: 1%;
+}
+
+/********************************************************************************/
+
+h4{
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 20px;
+}
+
+.Watchlist{
+    width: 100%;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+}
