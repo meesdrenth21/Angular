@@ -3,8 +3,11 @@ package com.Movies.MovieBackEnd.Controller;
 import com.Movies.MovieBackEnd.Model.Movie;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.DrbgParameters;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 /**
  * Author: Mees Drenth
@@ -39,6 +42,22 @@ public class MovieController {
     public List<Movie> deleteMovie(@PathVariable int id){
         watchlist.remove(id);
         return watchlist;
+    }
+
+    private Long currentId = 0L;
+
+    @PostMapping("/newMovie")
+    public Movie newMovie(@RequestBody Movie movie) {
+        if (movie.getId() == null) {
+            movie.setId(nextId());
+        }
+
+        watchlist.add(movie);
+        return movie;
+    }
+
+    private Long nextId() {
+        return ++currentId;
     }
 
 }
