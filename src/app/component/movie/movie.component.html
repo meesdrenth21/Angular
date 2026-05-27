@@ -1,9 +1,14 @@
 <p>movie works!</p>
 
-<div *ngFor="let movie of watchlistService.movies; let id = index">
+<div class="Watchlist" *ngFor="let movie of watchlistService.movies; let id = index">
   <h3>{{ movie.name }}</h3>
   <p>{{ movie.seen ? '✅ Watched' : '⬜ Not watched' }}</p>
 
   <button (click)="toggleWatched(id)">Toggle Watched</button>
   <button (click)="deleteMovie(id)">Delete</button>
+  
 </div>
+
+<button routerLink="new">New Movie</button>
+
+

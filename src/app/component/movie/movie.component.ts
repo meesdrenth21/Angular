@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { WatchlistService } from '../../Service/watchlist.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-movie',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './movie.component.html',
   styleUrl: './movie.component.css'
 })
@@ -25,6 +26,8 @@ export class MovieComponent implements OnInit {
   deleteMovie(id: number){
     this.watchlistService.deleteMovie(id);
   }
+
+ 
 
 
 

@@ -29,5 +29,10 @@ export class WatchlistService {
       this.movies = updatedList;
     });
   }
+
+  newMovie(movie: Movie) {
+    this.http.post<Movie>(`${this.apiUrl}/newMovie`, movie).subscribe();
+  }
 }
+
 

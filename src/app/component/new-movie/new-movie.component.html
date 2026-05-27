@@ -1,0 +1,12 @@
+
+
+<form [formGroup]="movieForm">
+<label for="movie">Movie</label>
+<input id="movie" type="text" formControlName="movie">
+<button  [disabled]="movieForm.valid">Submit</button>
+
+</form>
+
+<button routerLink="">Back</button>
+
+
